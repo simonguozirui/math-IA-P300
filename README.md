@@ -14,11 +14,6 @@ If you have a Windows or MacBook, please ensure you have a BLED112 dongle in ord
 only compatible with the 2016 version of the Muse headset as well as the Smith LowdownFocus glasses.**
 
 #### Software
-The code relies on [pygatt](https://github.com/peplin/pygatt) for the BLE communication.
-You have to use the development version of pygatt, that can be installed with pip using:
-
-`pip install git+https://github.com/peplin/pygatt`
-
 Install a variety of pip packages required in both Python2 and Python3.
 
 ```
@@ -31,6 +26,9 @@ Please install mne 0.13 in Python2 and mne 0.15 in Python3
 pip install mne==0.13
 pip3 install mne
 ```
+
+Install the older Pygatt version for the BLE communication.
+`pip install pygatt==3.1.1`
 
 Finally, the code for streaming and recording data is compatible with Python
 2.7 and Python 3.x. However, the code for stimulus presentation relies on

@@ -1,3 +1,5 @@
+#Based on https://github.com/alexandrebarachant/muse-lsl/blob/master/notebooks/P300%20with%20Muse.ipynb
+
 import sys
 from collections import OrderedDict
 

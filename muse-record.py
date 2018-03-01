@@ -1,3 +1,7 @@
+#Copyright (c) 2017, alexandre barachant
+#All rights reserved.
+#Use of this source code is governed by a BSD-style license that can be  found in the LICENSE file.
+
 from muse import Muse
 from time import sleep
 import numpy as np

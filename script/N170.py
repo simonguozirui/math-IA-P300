@@ -1,3 +1,4 @@
+#Based on https://github.com/alexandrebarachant/muse-lsl/blob/master/notebooks/N170%20with%20Muse.ipynb
 import sys
 from collections import OrderedDict
 
@@ -32,9 +33,9 @@ from mne import Epochs, find_events
 events = find_events(raw)
 event_id = {'Face': 1, 'House': 2}
 
-epochs = Epochs(raw, events=events, event_id=event_id, 
+epochs = Epochs(raw, events=events, event_id=event_id,
                 tmin=-0.1, tmax=0.8, baseline=None,
-                reject={'eeg': 75e-6}, preload=True, 
+                reject={'eeg': 75e-6}, preload=True,
                 verbose=False, picks=[0,1,2,3])
 
 print epochs
@@ -43,6 +44,6 @@ conditions = OrderedDict()
 conditions['Face'] = [1]
 conditions['House'] = [2]
 
-fig, ax = utils.plot_conditions(epochs, conditions=conditions, 
+fig, ax = utils.plot_conditions(epochs, conditions=conditions,
                                 ci=97.5, n_boot=1000, title='',
                                 diff_waveform=(1, 2))
