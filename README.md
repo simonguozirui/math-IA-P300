@@ -61,3 +61,5 @@ To produce the raw EEG power density spectrum and the ERP waveform, please edit 
 And then run `python /script/P300.py`
 
 For sample procedure of data analysis, check out [this notebook by Alexandre Barachant](https://github.com/alexandrebarachant/muse-lsl/blob/master/notebooks/P300%20with%20Muse.ipynb/).
+
+My full research would be published soon. For now, you can check the ERP waveforms that I generated in `/graph/`
