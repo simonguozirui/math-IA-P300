@@ -2,12 +2,19 @@
 #### An International Baccalaureate Higher Level Mathematics Investigation
 
 ## Credit
-Many of the scripts are from [Muse-lsl](https://github.com/alexandrebarachant/muse-lsl/), a collection of Python scripts to use the Muse 2016 BLE headset with LSL.
+Many of the scripts are modified upon or are from [Muse-lsl](https://github.com/alexandrebarachant/muse-lsl/), a collection of Python scripts to use the Muse 2016 BLE headset with LSL.
 
 ## Requirements
 
+#### Hardware
+You must have a Muse headband 2016 or a LowdownFocus Glasses.
+If you have a Windows or MacBook, please ensure you have a BLED112 dongle in order to establish BLE connection.
+
+**This code is
+only compatible with the 2016 version of the Muse headset as well as the Smith LowdownFocus glasses.**
+
+#### Software
 The code relies on [pygatt](https://github.com/peplin/pygatt) for the BLE communication.
-pygatt works on Linux and should work on Windows and macOS provided that you have a BLED112 dongle.
 You have to use the development version of pygatt, that can be installed with pip using:
 
 `pip install git+https://github.com/peplin/pygatt`
@@ -24,9 +31,6 @@ Please install mne 0.13 in Python2 and mne 0.15 in Python3
 pip install mne==0.13
 pip3 install mne
 ```
-
-You will also need to find the MAC address of your Muse headset or LowdownFocus. **This code is
-only compatible with the 2016 version of the Muse headset as well as the Smith LowdownFocus glasses.**
 
 Finally, the code for streaming and recording data is compatible with Python
 2.7 and Python 3.x. However, the code for stimulus presentation relies on
@@ -47,7 +51,13 @@ Start the P300 experiment in another terminal by executing
 `python experiment/generate_Visual_P300.py -d 120 & python lsl-record.py -d 120`
 
 ## Data
+Samples of data that I collected can be found in `/data/`
+All data are in .csv format, and the subject names are replaced with numbers to ensure privacy.
+If you choose to collect your data, make sure that your data is put in a hierarchy such as `data/category/subjectX/sessoinX/date+time.csv`
 
 ## Data Analysis
+To produce the raw EEG power density spectrum and the ERP waveform, please edit the data folder reference in `/script/P300.py`
 
-For data analysis, check out [these notebooks](https://github.com/alexandrebarachant/muse-lsl/blob/master/notebooks/).
+And then run `python /script/P300.py`
+
+For sample procedure of data analysis, check out [this notebook by Alexandre Barachant](https://github.com/alexandrebarachant/muse-lsl/blob/master/notebooks/P300%20with%20Muse.ipynb/).
