@@ -19,10 +19,8 @@ import utils
 
 subject = 1
 session = 1
-#dataPath = '../data/ia/P300Simon'
-dataPath = '../data/muse-ia/p=0.5'
-#dataPath = '../data/IA-P/p=0.1'
-#dataPath = '../data/visual/P300'
+#add data file
+dataPath = '../data/HeadbandP/p=0.5'
 
 raw = utils.load_data(dataPath, sfreq=256., subject_nb=subject, session_nb=session, ch_ind=[0, 1, 2, 3])
 
